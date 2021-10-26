@@ -122,8 +122,10 @@ main(int argc, char **argv)
 
 	if (opt_c) {
 		oflags = set_flags(module, oflags & ~flags);
+               fprintf(stdout, "flag is disabled\n");
 	} else if (opt_s) {
 		oflags = set_flags(module, oflags | flags);
+               fprintf(stdout, "flag is enabled\n");
 	}
 	print_flags(stdout, module, oflags, 0);
 	if (verbose) {
